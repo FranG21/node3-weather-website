@@ -1,7 +1,3 @@
-console.log('archivo javascript del cliente esta cargado')
-
-
-
 
 const weatherform = document.querySelector('form')
 const search = document.querySelector('input')
