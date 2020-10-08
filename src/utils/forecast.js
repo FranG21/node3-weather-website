@@ -9,7 +9,7 @@ const forecast = (lat, log, callback) => {
         } else if (body.error) {
             callback('No se encontro la localizacion', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ' Temperatura: ' + body.current.temperature + ' Feelslike: ' + body.current.feelslike)
+            callback(undefined, body.current.weather_descriptions[0] + ' Temperatura: ' + body.current.temperature + ' Feelslike: ' + body.current.feelslike+' humedad: '+body.current.humidity+'%')
         }
     })
 }
