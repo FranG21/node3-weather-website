@@ -5,6 +5,8 @@ const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
 //define partes para las configurar expresiones
+const port=process.env.PORT || 3000
+
 const app = express()
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
@@ -106,6 +108,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('servidor funca en puerto 3000')
+app.listen(port, () => {
+    console.log('servidor funca en puerto '+port)
 })
